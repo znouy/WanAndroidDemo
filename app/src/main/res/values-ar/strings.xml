@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">وان أندرويد</string>
+    <string name="action_search">بحث</string>
+    <string name="action_add">إضافة</string>
+    <string name="share_article">مشاركة مقالة</string>
+
+    <string name="language_title">اللغة</string>
+    <string name="language_system">نظام الافتراضي</string>
+    <string name="language_english">الإنجليزية</string>
+    <string name="language_chinese">الصينية</string>
+    <string name="language_arabic">العربية</string>
+    <string name="language_spanish">الإسبانية</string>
+    <string name="language_french">الفرنسية</string>
+    <string name="language_russian">الروسية</string>
+
+    <string name="bottom_nav_home">الرئيسية</string>
+    <string name="bottom_nav_square">الساحة</string>
+    <string name="bottom_nav_wenda">أسئلة</string>
+    <string name="bottom_nav_system">النظام</string>
+    <string name="bottom_nav_navigation">التنقل</string>
+    <string name="bottom_nav_project">المشاريع</string>
+    <string name="drawer_menu_integral">نقاطي</string>
+    <string name="drawer_menu_collection">مفضلاتي</string>
+    <string name="drawer_menu_share">مشاركاتي</string>
+    <string name="drawer_menu_history">سجل القراءة</string>
+    <string name="drawer_menu_bookmark">إشارات مرجعية</string>
+    <string name="drawer_menu_todo">المهام</string>
+    <string name="drawer_menu_night_mode">الوضع الليلي</string>
+    <string name="drawer_menu_settings">الإعدادات</string>
+    <string name="drawer_menu_logout">تسجيل الخروج</string>
+
+    <string name="settings_title">الإعدادات</string>
+    <string name="setting_language">اللغة</string>
+    <string name="setting_theme_mode">لون السمة</string>
+    <string name="setting_bookmark_remind">تذكير الإشارات المرجعية</string>
+    <string name="setting_bookmark_remind_desc">تذكير بالإشارات المرجعية المضافة حديثاً عند فتح التطبيق</string>
+    <string name="setting_show_questions">عرض الأسئلة</string>
+    <string name="setting_show_questions_desc">عرض علامة تبويب الأسئلة والأجوبة في الصفحة الرئيسية</string>
+    <string name="setting_show_banner">عرض الشريط الإعلاني</string>
+    <string name="setting_show_banner_desc">عرض الشريط الإعلاني في الصفحة الرئيسية</string>
+    <string name="setting_show_top">عرض المثبتة</string>
+    <string name="setting_show_top_desc">عرض المقالات المثبتة في الصفحة الرئيسية</string>
+    <string name="setting_clear_cache">مسح التخزين المؤقت</string>
+    <string name="setting_about_us">حول</string>
+    <string name="setting_privacy_policy">سياسة الخصوصية</string>
+    <string name="setting_logout">تسجيل الخروج</string>
+
+    <!-- Global shared -->
+    <string name="confirm">تأكيد</string>
+    <string name="cancel">إلغاء</string>
+
+    <!-- Dynamic version format -->
+    <string name="about_version_format">الإصدار %1$s</string>
+
+    <!-- Links -->
+    <string name="url_website">https://www.wanandroid.com</string>
+    <string name="url_source_code">https://github.com/LazylonEs/wanandroid_demo</string>
+    <string name="url_beian">https://beian.miit.gov.cn</string>
+    <string name="url_privacy">https://www.wanandroid.com/privacy</string>
+    <string name="url_terms">https://www.wanandroid.com/terms</string>
+
+    <!-- Disclaimer -->
+    <string name="disclaimer_title">إخلاء المسؤولية</string>
+    <string name="disclaimer_content">1. هذا البرنامج هو عميل مستقل غير رسمي لـ WanAndroid. جميع المقالات التقنية وخدمات بيانات الجدول الزمني المقدمة في البرنامج يتم توفيرها بواسطة واجهة برمجة التطبيقات الرسمية المفتوحة لـ [WanAndroid].\n\n2. هذا البرنامج لا يمتلك أو يخزن أي حقوق نشر للمقالات أو اللافتات أو غيرها من المحتويات. مصادر البيانات وحقوق التفسير تعود لـ [WanAndroid] (wanandroid.com).\n\n3. هذا البرنامج مخصص للتعلم الشخصي والبحث التقني فقط. أي استخدام تجاري ممنوع منعاً باتاً.</string>
+
+    <!-- Licenses -->
+    <string name="licenses_title">تراخيص البرمجيات مفتوحة المصدر</string>
+    <string name="licenses_content">يستخدم هذا البرنامج مكتبات مفتوحة المصدر التالية:\n\n• Kotlin (Apache-2.0)\n• Coroutines &amp; Flow (Apache-2.0)\n• Google Hilt (Apache-2.0)\n• Android Jetpack Suites\n  (AppCompat, Core-Ktx, SwipeRefreshLayout, ConstraintLayout, Splashscreen, Navigation, Room, Paging 3, DataStore) (Apache-2.0)\n• Material Design Components (Apache-2.0)\n• Retrofit &amp; OkHttp (Apache-2.0)\n• Moshi JSON (Apache-2.0)\n• Coil (MIT)\n• FlexboxLayout (Apache-2.0)\n• Timber (Apache-2.0)</string>
+
+    <!-- Protocol -->
+    <string name="protocol_title">الشروط والسياسات</string>
+    <string name="protocol_message">يرجى تحديد الشروط أو السياسة التي ترغب في قراءتها:</string>
+    <string name="protocol_privacy">سياسة الخصوصية</string>
+    <string name="protocol_terms">شروط الخدمة</string>
+</resources>

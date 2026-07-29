@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".WanAndroidApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:localeConfig="@xml/locales_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WanAndroidDemo"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="33">
+        <!-- 添加 tools:targetApi="33" 消除localeConfig警告 -->
+        <activity
+            android:name=".ui.auth.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.App.Starting"> <!-- 关键：使用 Splash 主题 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- 拦截系统夜间模式变动，不让 Activity 重建 -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="uiMode|locale|layoutDirection|screenSize|orientation"
+            android:exported="true"
+            android:label="@string/app_name" />
+        <!--
+            android:configChanges="uiMode|locale|layoutDirection|screenSize|orientation"-->
+        <activity android:name="com.example.wanandroiddemo.ui.article.ArticleListActivity" />
+        <activity android:name="com.example.wanandroiddemo.ui.web.ArticleDetailActivity" />
+        <activity
+            android:name=".ui.settings.SettingsActivity"
+            android:configChanges="uiMode|locale|layoutDirection|screenSize|orientation" />
+        <!-- 💡 声明登录注册 Activity -->
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" /><!-- 保证软键盘弹出时不遮挡输入框 -->
+        <!--     防止切换语言重建，导致闪黑屏   -->
+        <activity
+            android:name=".ui.settings.LanguageActivity"
+            android:configChanges="locale|layoutDirection|orientation|screenSize|smallestScreenSize" />
+        <activity android:name="com.example.wanandroiddemo.ui.collect.CollectActivity" />
+        <activity android:name="com.example.wanandroiddemo.ui.coin.CoinActivity" />
+        <activity android:name="com.example.wanandroiddemo.ui.bookmark.BookmarkActivity" />
+        <activity android:name="com.example.wanandroiddemo.ui.share.ShareActivity" />
+        <activity android:name="com.example.wanandroiddemo.ui.history.HistoryActivity" />
+        <activity android:name="com.example.wanandroiddemo.ui.todo.TodoActivity" />
+        <activity android:name="com.example.wanandroiddemo.ui.search.SearchActivity" />
+        <activity android:name="com.example.wanandroiddemo.ui.share.AddShareActivity" />
+        <activity android:name="com.example.wanandroiddemo.ui.about.AboutActivity" />
+
+
+        <!--在 Android 12 及以下版本中让 AppCompat 自动持久化用户的语言选择，用于低版本兼容-->
+        <service
+            android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+            <meta-data
+                android:name="autoStoreLocales"
+                android:value="true" />
+        </service>
+    </application>
+
+</manifest>

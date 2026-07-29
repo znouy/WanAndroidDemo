@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent">
+
+    <!-- 1. 加载中状态 -->
+    <LinearLayout
+        android:id="@+id/layoutLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:gravity="center"
+        tools:visibility="visible"
+        android:visibility="gone">
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="8dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在加载中..."
+            android:textColor="#999999"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- 2. 加载失败状态 -->
+    <TextView
+        android:id="@+id/tvError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="加载失败，点击重试"
+        android:textColor="#2f74e5"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        android:visibility="gone" />
+
+    <!-- 3. 已加载全部（底线） -->
+    <TextView
+        android:id="@+id/tvNoMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="— 我是有底线的 —"
+        android:textColor="#CCCCCC"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+</FrameLayout>

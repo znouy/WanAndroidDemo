@@ -1,0 +1,17 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- 💡 1. 绘制底层圆形背景：使用 40% 半透明白（在蓝色搜索栏上会呈现出温润的、半透明的浅蓝色圆形） -->
+    <path
+        android:fillColor="#66FFFFFF"
+        android:pathData="M12,2C6.47,2 2,6.47 2,12s4.47,10 10,10 10,-4.47 10,-10S17.53,2 12,2z" />
+
+    <!-- 💡 2. 绘制表层交叉叉号：使用 100% 纯白，精准嵌在圆心正中央 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M14.59,8L12,10.59 9.41,8 8,9.41 10.59,12 8,14.59 9.41,16 12,13.41 14.59,16 16,14.59 13.41,12 16,9.41 14.59,8z" />
+
+</vector>

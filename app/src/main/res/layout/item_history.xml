@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.wanandroiddemo.ui.widget.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+
+        android:minHeight="72dp"
+        android:paddingHorizontal="15dp"
+        android:paddingTop="12dp">
+
+        <!-- 💡 1. 左侧类型锚点图标：灰色圆底，彻底锁死左侧视觉重心 -->
+        <FrameLayout
+            android:id="@+id/layoutIconBg"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_priority_bg"
+            android:backgroundTint="#F2F2F2"
+            app:layout_constraintBottom_toTopOf="@id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivTypeIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_history_web" />
+        </FrameLayout>
+
+
+        <!-- 💡 3. 标题：宽度设为 0dp（自适应），最大允许折行展示 2 行（maxLines="2"），保证标题完整展示 -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:breakStrategy="simple"
+            android:ellipsize="end"
+            android:lineSpacingMultiplier="1.1"
+            android:maxLines="2"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tvSubtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/layoutIconBg"
+            app:layout_constraintTop_toTopOf="@id/tvSubtitle"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Android 技术周刊 （2026-06-17 ~ 2026-06-24）" />
+
+        <!-- 💡 4. 复合副标题：无论是文章（显示 作者 · 分类）还是网页（显示网址），统一输出在这一行 -->
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#8A8E93"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvTitle"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            tools:text="http://www.baidu.com" />
+        <!--  右侧阅读时间：精简且字号缩小，始终对齐在第一行标题的右侧顶部，不随折行偏移 -->
+        <TextView
+            android:id="@+id/tvReadTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="#999999"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toTopOf="@id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+            tools:text="2026-06-29 10:35:12" />
+
+        <!-- 💡 5. 底部精致分隔线：起始位置与文字对齐，不延伸到图标下 -->
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="12dp"
+            android:background="#EBEBEB"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_delete"
+        android:padding="15dp"
+        android:background="#FF4D4F"
+        android:gravity="center"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="删除" />
+</com.example.wanandroiddemo.ui.widget.SwipeMenuLayout>

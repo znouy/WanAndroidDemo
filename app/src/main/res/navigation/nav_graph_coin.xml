@@ -1,0 +1,9 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_coin"
+    app:startDestination="@id/coinFragment">
+    <fragment
+        android:id="@+id/coinFragment"
+        android:name="com.example.wanandroiddemo.ui.coin.CoinFragment"
+        android:label="我的积分" />
+</navigation>

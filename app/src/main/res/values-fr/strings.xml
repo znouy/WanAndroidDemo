@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">WanAndroid</string>
+    <string name="action_search">rechercher</string>
+    <string name="action_add">ajouter</string>
+    <string name="share_article">Partager un article</string>
+
+    <string name="language_title">Langue</string>
+    <string name="language_system">Par défaut du système</string>
+    <string name="language_english">Anglais</string>
+    <string name="language_chinese">Chinois</string>
+    <string name="language_arabic">Arabe</string>
+    <string name="language_spanish">Espagnol</string>
+    <string name="language_french">Français</string>
+    <string name="language_russian">Russe</string>
+
+    <string name="bottom_nav_home">Accueil</string>
+    <string name="bottom_nav_square">Place</string>
+    <string name="bottom_nav_wenda">Q&amp;R</string>
+    <string name="bottom_nav_system">Système</string>
+    <string name="bottom_nav_navigation">Navigation</string>
+    <string name="bottom_nav_project">Projet</string>
+    <string name="drawer_menu_integral">Mes points</string>
+    <string name="drawer_menu_collection">Favoris</string>
+    <string name="drawer_menu_share">Partager</string>
+    <string name="drawer_menu_history">Historique</string>
+    <string name="drawer_menu_bookmark">Favoris</string>
+    <string name="drawer_menu_todo">TODO</string>
+    <string name="drawer_menu_night_mode">Mode nuit</string>
+    <string name="drawer_menu_settings">Paramètres</string>
+    <string name="drawer_menu_logout">Se déconnecter</string>
+
+    <string name="settings_title">Paramètres</string>
+    <string name="setting_language">Langue</string>
+    <string name="setting_theme_mode">Couleur du thème</string>
+    <string name="setting_bookmark_remind">Rappel de favoris</string>
+    <string name="setting_bookmark_remind_desc">Rappel des favoris récemment ajoutés à l\'ouverture de l\'application</string>
+    <string name="setting_show_questions">Afficher les questions</string>
+    <string name="setting_show_questions_desc">Afficher l\'onglet Q&amp;A sur la page d\'accueil</string>
+    <string name="setting_show_banner">Afficher la bannière</string>
+    <string name="setting_show_banner_desc">Afficher les bannières sur la page d\'accueil</string>
+    <string name="setting_show_top">Afficher les articles épinglés</string>
+    <string name="setting_show_top_desc">Afficher les articles épinglés sur la page d\'accueil</string>
+    <string name="setting_clear_cache">Vider le cache</string>
+    <string name="setting_about_us">À propos</string>
+    <string name="setting_privacy_policy">Politique de confidentialité</string>
+    <string name="setting_logout">Se déconnecter</string>
+
+    <!-- Global shared -->
+    <string name="confirm">Confirmer</string>
+    <string name="cancel">Annuler</string>
+
+    <!-- Dynamic version format -->
+    <string name="about_version_format">Version %1$s</string>
+
+    <!-- Links -->
+    <string name="url_website">https://www.wanandroid.com</string>
+    <string name="url_source_code">https://github.com/LazylonEs/wanandroid_demo</string>
+    <string name="url_beian">https://beian.miit.gov.cn</string>
+    <string name="url_privacy">https://www.wanandroid.com/privacy</string>
+    <string name="url_terms">https://www.wanandroid.com/terms</string>
+
+    <!-- Disclaimer -->
+    <string name="disclaimer_title">Avis de non-responsabilité</string>
+    <string name="disclaimer_content">1. Ce logiciel est un client indépendant non officiel pour WanAndroid. Tous les articles techniques et services de données présentés dans le logiciel sont fournis par l\'API ouverte officielle de [WanAndroid].\n\n2. Ce logiciel ne possède ni ne stocke aucun droit d\'auteur sur les articles, bannières ou autres contenus. Les sources de données et les droits d\'interprétation appartiennent à [WanAndroid] (wanandroid.com).\n\n3. Ce programme est destiné uniquement à l\'apprentissage personnel et à la recherche technique. Toute utilisation commerciale est strictement interdite.</string>
+
+    <!-- Licenses -->
+    <string name="licenses_title">Licences Open Source</string>
+    <string name="licenses_content">Ce logiciel utilise les bibliothèques open source suivantes :\n\n• Kotlin (Apache-2.0)\n• Coroutines &amp; Flow (Apache-2.0)\n• Google Hilt (Apache-2.0)\n• Android Jetpack Suites\n  (AppCompat, Core-Ktx, SwipeRefreshLayout, ConstraintLayout, Splashscreen, Navigation, Room, Paging 3, DataStore) (Apache-2.0)\n• Material Design Components (Apache-2.0)\n• Retrofit &amp; OkHttp (Apache-2.0)\n• Moshi JSON (Apache-2.0)\n• Coil (MIT)\n• FlexboxLayout (Apache-2.0)\n• Timber (Apache-2.0)</string>
+
+    <!-- Protocol -->
+    <string name="protocol_title">Termes et politiques</string>
+    <string name="protocol_message">Veuillez sélectionner les termes ou la politique que vous souhaitez lire :</string>
+    <string name="protocol_privacy">Politique de confidentialité</string>
+    <string name="protocol_terms">Conditions d\'utilisation</string>
+</resources>

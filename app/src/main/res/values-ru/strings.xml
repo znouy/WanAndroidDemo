@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">WanAndroid</string>
+    <string name="action_search">поиск</string>
+    <string name="action_add">добавить</string>
+    <string name="share_article">Поделиться статьей</string>
+
+    <string name="language_title">Язык</string>
+    <string name="language_system">Системный по умолчанию</string>
+    <string name="language_english">Английский</string>
+    <string name="language_chinese">Китайский</string>
+    <string name="language_arabic">Арабский</string>
+    <string name="language_spanish">Испанский</string>
+    <string name="language_french">Французский</string>
+    <string name="language_russian">Русский</string>
+
+    <string name="bottom_nav_home">Главная</string>
+    <string name="bottom_nav_square">Площадь</string>
+    <string name="bottom_nav_wenda">Вопросы</string>
+    <string name="bottom_nav_system">Система</string>
+    <string name="bottom_nav_navigation">Навигация</string>
+    <string name="bottom_nav_project">Проекты</string>
+    <string name="drawer_menu_integral">Баллы</string>
+    <string name="drawer_menu_collection">Избранное</string>
+    <string name="drawer_menu_share">Поделиться</string>
+    <string name="drawer_menu_history">История</string>
+    <string name="drawer_menu_bookmark">Закладки</string>
+    <string name="drawer_menu_todo">TODO</string>
+    <string name="drawer_menu_night_mode">Ночной режим</string>
+    <string name="drawer_menu_settings">Настройки</string>
+    <string name="drawer_menu_logout">Выйти</string>
+
+    <string name="settings_title">Настройки</string>
+    <string name="setting_language">Язык</string>
+    <string name="setting_theme_mode">Цвет темы</string>
+    <string name="setting_bookmark_remind">Напоминание о закладках</string>
+    <string name="setting_bookmark_remind_desc">Напоминать о новых закладках при открытии приложения</string>
+    <string name="setting_show_questions">Показывать вопросы</string>
+    <string name="setting_show_questions_desc">Отображать вкладку вопросов и ответов на главной странице</string>
+    <string name="setting_show_banner">Показывать баннер</string>
+    <string name="setting_show_banner_desc">Отображать баннеры на главной странице</string>
+    <string name="setting_show_top">Показывать закрепленные</string>
+    <string name="setting_show_top_desc">Отображать закрепленные статьи на главной странице</string>
+    <string name="setting_clear_cache">Очистить кэш</string>
+    <string name="setting_about_us">О приложении</string>
+    <string name="setting_privacy_policy">Политика конфиденциальности</string>
+    <string name="setting_logout">Выйти</string>
+
+    <!-- Global shared -->
+    <string name="confirm">Подтвердить</string>
+    <string name="cancel">Отмена</string>
+
+    <!-- Dynamic version format -->
+    <string name="about_version_format">Версия %1$s</string>
+
+    <!-- Links -->
+    <string name="url_website">https://www.wanandroid.com</string>
+    <string name="url_source_code">https://github.com/LazylonEs/wanandroid_demo</string>
+    <string name="url_beian">https://beian.miit.gov.cn</string>
+    <string name="url_privacy">https://www.wanandroid.com/privacy</string>
+    <string name="url_terms">https://www.wanandroid.com/terms</string>
+
+    <!-- Disclaimer -->
+    <string name="disclaimer_title">Отказ от ответственности</string>
+    <string name="disclaimer_content">1. Это программное обеспечение является неофициальным независимым клиентом для WanAndroid. Все технические статьи и сервисы данных, представленные в приложении, предоставляются официальным открытым API [WanAndroid].\n\n2. Данное ПО не владеет и не хранит авторские права на статьи, баннеры или другой контент. Источники данных и права на интерпретацию принадлежат [WanAndroid] (wanandroid.com).\n\n3. Данная программа предназначена только для личного обучения и технических исследований. Любое коммерческое использование строго запрещено.</string>
+
+    <!-- Licenses -->
+    <string name="licenses_title">Лицензии Open Source</string>
+    <string name="licenses_content">Это программное обеспечение использует следующие библиотеки с открытым исходным кодом:\n\n• Kotlin (Apache-2.0)\n• Coroutines &amp; Flow (Apache-2.0)\n• Google Hilt (Apache-2.0)\n• Android Jetpack Suites\n  (AppCompat, Core-Ktx, SwipeRefreshLayout, ConstraintLayout, Splashscreen, Navigation, Room, Paging 3, DataStore) (Apache-2.0)\n• Material Design Components (Apache-2.0)\n• Retrofit &amp; OkHttp (Apache-2.0)\n• Moshi JSON (Apache-2.0)\n• Coil (MIT)\n• FlexboxLayout (Apache-2.0)\n• Timber (Apache-2.0)</string>
+
+    <!-- Protocol -->
+    <string name="protocol_title">Условия и политики</string>
+    <string name="protocol_message">Пожалуйста, выберите условия или политику для чтения:</string>
+    <string name="protocol_privacy">Политика конфиденциальности</string>
+    <string name="protocol_terms">Условия использования</string>
+</resources>

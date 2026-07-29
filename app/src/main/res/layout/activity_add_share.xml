@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/theme_color"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="@string/drawer_menu_share"
+        app:titleCentered="true"
+        app:titleTextColor="@android:color/white" />
+    <!-- 输入内容区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- 标题输入框 (TextInputLayout 风格) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutTitle"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="文章标题">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 链接输入框 (TextInputLayout 风格) -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutLink"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="文章链接(http:// 或 https://)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textUri"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="* 分享的文章在通过审核后会展现在广场页，请勿发布违规内容。"
+            android:textColor="#999999"
+            android:textSize="11sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:padding="12dp"
+            android:id="@+id/tv_submit"
+            android:layout_marginTop="35dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:layout_marginHorizontal="15dp"
+            android:background="@color/theme_color"
+            android:layout_height="wrap_content"
+            android:text="分享" />
+    </LinearLayout>
+
+</LinearLayout>

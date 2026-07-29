@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.wanandroiddemo.ui.widget.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="0.5dp"
+    android:background="@color/theme_card_background"
+    app:cardElevation="2dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp"
+        android:background="@color/theme_card_background"
+        app:cardElevation="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- 1. 作者/分享人 -->
+            <TextView
+                android:id="@+id/tvAuthor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#666666"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="鸿洋" />
+
+            <!-- 2. 时间 -->
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#999999"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="2023-11-20" />
+
+            <!-- 3. 文章标题（最大两行，多出部分打点） -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvAuthor"
+                tools:text="Android 性能优化之绘制优化" />
+
+            <!-- 4. 所属分类（左下角）及置顶标签 -->
+            <TextView
+                android:id="@+id/tvTopLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:paddingVertical="4dp"
+                tools:visibility="visible"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="11sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tvCategory"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                android:text="置顶" />
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="#F5F5F5"
+                android:layout_marginStart="8dp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:textColor="#777777"
+                android:textSize="11sp"
+                app:layout_goneMarginStart="0dp"
+                app:layout_constraintStart_toEndOf="@id/tvTopLabel"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                tools:text="开发环境 / Android Studio" />
+
+            <!-- 5. 收藏按钮（红心，右下角） -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCollect"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="6dp"
+                android:src="@drawable/ic_favorite_red"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_delete"
+        android:padding="15dp"
+        android:background="#FF4D4F"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="删除" />
+</com.example.wanandroiddemo.ui.widget.SwipeMenuLayout>

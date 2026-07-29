@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="4dp" />
+    <solid android:color="#2f74e5" /> <!-- 后续在代码中用 GradientDrawable 动态改变此背景色 -->
+</shape>

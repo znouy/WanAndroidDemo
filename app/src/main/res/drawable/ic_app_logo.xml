@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- 背景：标准的 Material 3 品牌蓝圆角底座 -->
+    <path
+        android:fillColor="#2F74E5"
+        android:pathData="M20,0 h60 a20,20 0 0 1 20,20 v60 a20,20 0 0 1 -20,20 h-60 a20,20 0 0 1 -20,-20 v-60 a20,20 0 0 1 20,-20 z"/>
+    <!-- 顶元素：白色播放（“玩”）三角形 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M44,20 L58,28 L44,36 Z"/>
+    <!-- 主元素：白色几何折叠 “W” 丝带 -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="6.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M28,42 L42,70 L50,53 L58,70 L72,42"/>
+</vector>

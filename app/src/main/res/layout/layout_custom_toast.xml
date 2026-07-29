@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_custom_toast"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="12dp">
+
+    <!--  图标 -->
+    <ImageView
+        android:id="@+id/ivToastIcon"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/tvToastMessage"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@android:drawable/ic_dialog_info"
+        tools:visibility="visible" />
+
+    <!--  文本 -->
+    <TextView
+        android:id="@+id/tvToastMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_goneMarginStart="0dp"
+        app:layout_constraintStart_toEndOf="@id/ivToastIcon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="这是一条自适应提示消息" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- 1. 安卓小天线 (白色，居中偏上) -->
+    <path
+        android:pathData="M46,38 L41,28"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M62,38 L67,28"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3.5"
+        android:strokeLineCap="round" />
+
+    <!-- 2. 安卓机器人脑袋 -->
+    <path
+        android:pathData="M36,48 A18,18 0 0,1 72,48 Z"
+        android:fillColor="#FFFFFF" />
+
+    <!-- 3. 安卓机器人快乐的眼睛 (眯眯眼，用背景紫镂空) -->
+    <path
+        android:pathData="M43,45 Q45,42 47,45"
+        android:strokeColor="#FF6200EE"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M61,45 Q63,42 65,45"
+        android:strokeColor="#FF6200EE"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!-- 4. 翻开的技术书籍/博文库 -->
+    <!-- 左书页 (白色) -->
+    <path
+        android:pathData="M54,62 L32,54 L32,70 L54,78 Z"
+        android:fillColor="#FFFFFF" />
+    <!-- 右书页 (白色) -->
+    <path
+        android:pathData="M54,62 L76,54 L76,70 L54,78 Z"
+        android:fillColor="#FFFFFF" />
+
+    <!-- 书本中缝与边缘阴影 (使用背景紫雕刻出书本层次) -->
+    <path
+        android:pathData="M54,62 L54,78"
+        android:strokeColor="#FF6200EE"
+        android:strokeWidth="2.5" />
+    <path
+        android:pathData="M32,70 L54,78 L76,70"
+        android:strokeColor="#FF6200EE"
+        android:strokeWidth="2"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000" />
+
+</vector>

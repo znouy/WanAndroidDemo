@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <!-- 分割线高度：0.5dp，显得非常精致 -->
+    <size android:height="0.5dp" />
+    <!-- 分割线颜色：极淡的灰色 -->
+    <solid  android:color="#E0E0E0" />
+</shape>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_coin"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="@string/drawer_menu_integral" />
+        <item
+            android:id="@+id/nav_collection"
+            android:icon="@android:drawable/ic_menu_compass"
+            android:title="@string/drawer_menu_collection" />
+        <item
+            android:id="@+id/nav_bookmark"
+            android:visible="false"
+            android:icon="@drawable/ic_bookmark"
+            android:title="@string/drawer_menu_bookmark" />
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@android:drawable/ic_menu_share"
+            android:title="@string/drawer_menu_share" />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@android:drawable/ic_menu_recent_history"
+            android:title="@string/drawer_menu_history" />
+        <item
+            android:id="@+id/nav_todo"
+            android:icon="@android:drawable/ic_menu_day"
+            android:title="@string/drawer_menu_todo" />
+        <item
+            android:id="@+id/nav_night_mode"
+            android:icon="@android:drawable/ic_menu_set_as"
+            android:title="@string/drawer_menu_night_mode" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="@string/drawer_menu_settings" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@android:drawable/ic_lock_power_off"
+            android:title="@string/drawer_menu_logout" />
+    </group>
+</menu>

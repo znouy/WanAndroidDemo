@@ -1,0 +1,14 @@
+<resources>
+
+    <style name="Theme.WanAndroidDemo" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!--应用程序的主要主题颜色,用于主要的 UI 元素:AppBar（工具栏）、按钮背景、活动栏等-->
+        <item name="colorPrimary">@color/theme_color</item>
+        <!-- 状态栏的颜色 -->
+        <item name="android:statusBarColor">@color/theme_color</item>
+        <!-- 如果是 Light 主题，图标通常是深色的。如果你的状态栏是深粉色，建议改为白色图标： -->
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- 💡 让整个 Activity 窗口背景自动跟随日夜间色值变换 -->
+        <item name="android:windowBackground">@color/theme_background</item>
+    </style>
+</resources>

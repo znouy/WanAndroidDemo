@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SettingItem">
+        <attr name="title" format="string" />
+        <attr name="desc" format="string" />
+        <attr name="value" format="string" />
+    </declare-styleable>
+
+    <!-- 自定义搜索输入控件声明可配置属性 -->
+    <declare-styleable name="SearchInputView">
+        <attr name="showSearchIcon" format="boolean" />
+        <attr name="queryHint" format="string" />
+        <!-- 控制右侧“搜索”文字按钮的属性 -->
+        <attr name="showSearchText" format="boolean" />
+        <attr name="searchText" format="string" />
+        <attr name="searchTextColor" format="color" />
+    </declare-styleable>
+</resources>

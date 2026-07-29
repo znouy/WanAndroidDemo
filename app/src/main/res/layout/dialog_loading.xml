@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:layout_gravity="center"
+    app:cardBackgroundColor="?attr/colorSurfaceContainer"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:strokeWidth="0dp">
+    <!-- ?attr/colorSurfaceContainer，在深色模式下会自动变为深灰卡片，避免白色刺眼 -->
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        app:indicatorSize="40dp"
+        app:indicatorColor="?attr/colorPrimary"
+        app:trackThickness="4dp" />
+    <!-- 自动跟随项目主主题色调 -->
+</com.google.android.material.card.MaterialCardView>

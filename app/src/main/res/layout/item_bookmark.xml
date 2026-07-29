@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.wanandroiddemo.ui.widget.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- 书签名字和链接 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="16dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="fsdggghhfdsgsdgsdg" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="#999999"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- 右侧滑动按钮组 -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal">
+        <!-- 编辑按钮 -->
+        <TextView
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:paddingHorizontal="12dp"
+            android:text="编辑"
+            android:textColor="#2f74e5"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete" />
+
+        <!-- 删除按钮 -->
+        <TextView
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:gravity="center"
+            android:paddingHorizontal="12dp"
+            android:text="删除"
+            android:textColor="#FF4D4F"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.example.wanandroiddemo.ui.widget.SwipeMenuLayout>

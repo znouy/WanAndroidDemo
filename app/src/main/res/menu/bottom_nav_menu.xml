@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="@string/bottom_nav_home" />
+    <item
+        android:id="@+id/squareFragment"
+        android:icon="@drawable/ic_square"
+        android:title="@string/bottom_nav_square" />
+    <item
+        android:id="@+id/wendaFragment"
+        android:icon="@drawable/ic_wenda"
+        android:title="问答" />
+  <!--  <item
+        android:id="@+id/systemFragment"
+        android:visible="false"
+        android:icon="@drawable/ic_system"
+        android:title="@string/bottom_nav_system" />-->
+
+    <item
+        android:id="@+id/navFragment"
+        android:icon="@drawable/ic_account"
+        android:title="@string/bottom_nav_navigation" />
+    <item
+        android:id="@+id/projectFragment"
+        android:icon="@drawable/ic_project"
+        android:title="@string/bottom_nav_project" />
+</menu>

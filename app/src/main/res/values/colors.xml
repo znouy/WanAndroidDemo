@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 1. 页面默认底色：浅灰色 -->
+    <color name="theme_background">#F5F5F7</color>
+    <color name="theme_card_background">#FFFFFF</color> <!-- 列表卡片底色：纯白 -->
+
+    <!-- 2. 主标题文字：几乎纯黑 -->
+    <color name="theme_text_primary">#1C1C1E</color>
+    <color name="theme_text_secondary">#8E8E93</color>  <!-- 副标题/作者：暗灰色 -->
+
+    <!-- 3. 浅灰分割线 -->
+    <color name="theme_divider">#E5E5EA</color>
+
+    <!-- 4. 标题栏在日间恢复为您的主题蓝色 -->
+    <color name="theme_toolbar_bg">@color/theme_color</color>
+
+    <!--日间主题色-->
+    <color name="theme_color">#FF6750A4</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#2D2D45</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_70">#B3FFFFFF</color>
+    <color name="light_gray">#F5F5F5</color>
+    <!--colorPrimary
+    colorAccent-->
+</resources>

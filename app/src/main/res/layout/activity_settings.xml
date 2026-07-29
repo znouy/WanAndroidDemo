@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/theme_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:titleCentered="true"
+        app:title="@string/settings_title"
+        app:titleTextColor="@android:color/white" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <com.example.wanandroiddemo.ui.widget.SettingArrowView
+                android:id="@+id/arrowLanguage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/setting_language"
+                app:value="@string/language_system" />
+
+            <com.example.wanandroiddemo.ui.widget.SettingArrowView
+                android:id="@+id/arrowTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/setting_theme_mode"
+                app:value="@string/language_system" />
+
+            <com.example.wanandroiddemo.ui.widget.SettingSwitchView
+                android:id="@+id/switchBookmark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:desc="@string/setting_bookmark_remind_desc"
+                app:title="@string/setting_bookmark_remind" />
+
+            <com.example.wanandroiddemo.ui.widget.SettingSwitchView
+                android:id="@+id/switchQuestion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:desc="@string/setting_show_questions_desc"
+                app:title="@string/setting_show_questions" />
+
+            <com.example.wanandroiddemo.ui.widget.SettingSwitchView
+                android:id="@+id/switchBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:desc="@string/setting_show_banner_desc"
+                app:title="@string/setting_show_banner" />
+
+            <com.example.wanandroiddemo.ui.widget.SettingSwitchView
+                android:id="@+id/switchTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:desc="@string/setting_show_top_desc"
+                app:title="@string/setting_show_top" />
+
+
+            <com.example.wanandroiddemo.ui.widget.SettingArrowView
+                android:id="@+id/arrowClearCache"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/setting_clear_cache" />
+
+            <com.example.wanandroiddemo.ui.widget.SettingArrowView
+                android:id="@+id/arrowAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/setting_about_us" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 当 Tab 处于选中状态（selected）时，显示为系统纯白色 -->
+    <item android:state_selected="true" android:color="@android:color/white" />
+
+    <!--  默认（未选中）状态下，显示为 70% 透明度白色 -->
+    <item android:color="@color/white_70" />
+</selector>

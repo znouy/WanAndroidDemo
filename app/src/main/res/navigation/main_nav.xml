@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/homeFragment">
+
+    <!-- ID必须与 bottom_nav_menu.xml 中的 id 一致 -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.wanandroiddemo.ui.home.HomeFragment"
+        android:label="首页" />
+
+    <fragment
+        android:id="@+id/squareFragment"
+        android:name="com.example.wanandroiddemo.ui.square.SquareFragment"
+        android:label="广场" />
+    <fragment
+        android:id="@+id/wendaFragment"
+        android:name="com.example.wanandroiddemo.ui.wenda.WendaFragment"
+        android:label="问答" />
+
+    <fragment
+        android:id="@+id/systemFragment"
+        android:name="com.example.wanandroiddemo.ui.system.SystemFragment"
+        android:label="体系" />
+
+    <fragment
+        android:id="@+id/navFragment"
+        android:name="com.example.wanandroiddemo.ui.navigation.NavigationParentFragment"
+        android:label="导航" />
+
+    <fragment
+        android:id="@+id/projectFragment"
+        android:name="com.example.wanandroiddemo.ui.project.ProjectFragment"
+        android:label="项目" />
+
+    <!-- 引入外部子模块导航图，物理文件实现完美隔离！ -->
+    <include app:graph="@navigation/nav_graph_coin" />
+</navigation>

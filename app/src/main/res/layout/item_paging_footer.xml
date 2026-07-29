@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <!-- 1. 加载中状态（转圈） -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:indeterminateTint="#2F74E5" />
+
+    <!-- 2. 加载失败状态（优化：扁平化高亮文本，带波纹反馈，更显精致） -->
+    <TextView
+        android:id="@+id/btnRetry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="8dp"
+        android:text="加载失败，点击重试"
+        android:textColor="#2F74E5"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <!-- 3.数据全部加载完毕状态（我是有底线的） -->
+    <TextView
+        android:id="@+id/tvNoMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="— 我是有底线的 —"
+        android:textColor="#999999"
+        android:textSize="12sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+</FrameLayout>

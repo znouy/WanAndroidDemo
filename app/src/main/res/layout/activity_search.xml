@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+    <!-- 官方 Material Toolbar 与 SearchView 黄金组合 -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#2f74e5"
+        app:contentInsetStartWithNavigation="0dp"
+        app:navigationIcon="@drawable/ic_back"
+        app:navigationIconTint="#FFFFFF">
+
+        <com.example.wanandroiddemo.ui.widget.SearchInputView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginEnd="16dp"
+            android:theme="@style/Theme.SearchView.WhiteText"
+            app:iconifiedByDefault="false"
+            app:queryHint="请输入关键词，多个空格隔开"
+            app:queryBackground="@null"
+            app:searchIcon="@null" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <!-- 主屏层叠结构 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F8F8F8">
+
+        <!-- A 容器：搜索推荐（热门搜索词 + 历史搜索） -->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/layoutSuggestion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="热门搜索"
+                    android:textColor="#333333"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <!-- 💡 引入 Google 官方 Flexbox 换行容器 -->
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/flowHotKeys"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="24dp"
+                    app:flexWrap="wrap"
+                    app:alignItems="stretch"
+                    app:alignContent="stretch" />
+
+                <!-- 历史搜索标题栏 -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layoutHistoryTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="历史搜索"
+                        android:textColor="#333333"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/tvClearHistory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="清空历史"
+                        android:textColor="#999999"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- 💡 引入 Google 官方 Flexbox 换行容器 -->
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/flowHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    app:flexWrap="wrap"
+                    app:alignItems="stretch"
+                    app:alignContent="stretch" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!--  B 容器：StateLayout 多状态容器，内容包裹 PagingRecyclerView 列表 -->
+        <com.example.wanandroiddemo.ui.widget.StateLayout
+            android:id="@+id/stateLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <com.example.wanandroiddemo.ui.widget.PagingRecyclerView
+                android:id="@+id/pagingList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.example.wanandroiddemo.ui.widget.StateLayout>
+        <!-- 页面等待推荐词加载的转圈 -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+</LinearLayout>

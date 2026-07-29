@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvDialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="新增任务"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="任务标题"
+        android:inputType="text"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:layout_marginBottom="12dp"/>
+
+    <EditText
+        android:id="@+id/etContent"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:hint="任务内容或描述"
+        android:gravity="top|start"
+        android:inputType="textMultiLine"
+        android:textColor="#333333"
+        android:textSize="14sp"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- 日期选择行 -->
+    <LinearLayout
+        android:id="@+id/layoutDate"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="截止日期"
+            android:textColor="#333333"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tvDateDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择日期"
+            android:textColor="#2f74e5"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <!-- 优先级选择行 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="优先级"
+            android:textColor="#333333"
+            android:textSize="14sp"/>
+
+        <RadioGroup
+            android:id="@+id/rgPriority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbNormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="一般"
+                android:textSize="13sp"
+                android:checked="true"
+                android:layout_marginEnd="12dp"/>
+
+            <RadioButton
+                android:id="@+id/rbHigh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="重要"
+                android:textSize="13sp" />
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>

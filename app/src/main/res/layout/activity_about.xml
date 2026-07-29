@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <!-- 标题栏 Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/theme_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back"
+        app:title="@string/setting_about_us"
+        app:titleCentered="true"
+        app:titleTextColor="@android:color/white" />
+
+    <!-- 主体视窗 -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="32dp">
+
+            <!-- 1. App Logo  -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_launcher" />
+
+            <!-- App 名字 -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="玩Android"
+                android:textColor="#333333"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!--  动态读取的版本号显示 -->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="#999999"
+                android:textSize="14sp"
+                tools:text="v1.0.0" />
+
+            <!-- 2. 设置选项组合区 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical">
+
+                <com.example.wanandroiddemo.ui.widget.SettingArrowView
+                    android:id="@+id/itemWebsite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:title="官方网站" />
+
+                <com.example.wanandroiddemo.ui.widget.SettingArrowView
+                    android:id="@+id/itemSourceCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:title="项目源码" />
+
+                <com.example.wanandroiddemo.ui.widget.SettingArrowView
+                    android:id="@+id/itemLicenses"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:title="开源许可声明" />
+
+                <com.example.wanandroiddemo.ui.widget.SettingArrowView
+                    android:id="@+id/itemDisclaimer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:title="免责声明" />
+
+                <com.example.wanandroiddemo.ui.widget.SettingArrowView
+                    android:id="@+id/itemProtocol"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:title="隐私政策与用户协议" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- 3. 最底部备案与版权合规声明区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <!-- 工信部 App ICP 备案号（国内上架一票否决项，必须在此展示） -->
+        <TextView
+            android:id="@+id/tvBeian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="4dp"
+            android:text="粤ICP备2026123456号-1A"
+            android:textColor="#2f74e5"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <!-- 开发者主体信息 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="开发者：znouy"
+            android:textColor="#999999"
+            android:textSize="11sp" />
+
+        <!-- 规范版权所有 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Copyright © 2026. All Rights Reserved."
+            android:textColor="#CCCCCC"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 1. 页面整体背景，采用最深邃的纯暗黑底色 -->
+    <color name="theme_background">#121212</color>      <!-- 页面底色：极深灰#121212 -->
+    <color name="theme_card_background">#1E1E1E</color> <!-- 列表卡片底色：微亮深灰（制造卡片堆叠的深浅层级感） -->
+
+    <!-- 2. 高亮白文字，防止眩光，但对比度极高 -->
+    <color name="theme_text_primary">#E5E5E5</color>    <!-- 主标题文字：冷白 -->
+    <color name="theme_text_secondary">#8E8E93</color>  <!-- 副标题/作者：经典中灰 -->
+
+    <!-- 暗灰分割线 -->
+    <color name="theme_divider">#2C2C2E</color>         <!-- 极其低调的暗黑分割线 -->
+
+    <!-- 4. 标题栏在夜间应该和背景融为一体，采用深灰色 -->
+    <color name="theme_toolbar_bg">#1A1A1A</color>
+
+    <color name="theme_color">#FF03DAC5</color><!--夜间模式主题色固定 #2D2D45FF-->
+</resources>
