@@ -87,6 +87,24 @@ class SwipeMenuLayout @JvmOverloads constructor(
         private var viewCache: WeakReference<SwipeMenuLayout>? = null
     }
 
+    // ==================== 🛠️ 关键修复 1：重写 Margin 支持 ====================
+    override fun generateLayoutParams(attrs: AttributeSet?): LayoutParams {
+        return MarginLayoutParams(context, attrs)
+    }
+
+    override fun generateLayoutParams(p: LayoutParams?): LayoutParams {
+        return MarginLayoutParams(p)
+    }
+
+    override fun generateDefaultLayoutParams(): LayoutParams {
+        return MarginLayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
+    }
+
+    override fun checkLayoutParams(p: LayoutParams?): Boolean {
+        return p is MarginLayoutParams
+    }
+    // =========================================================================
+
     override fun onFinishInflate() {
         super.onFinishInflate()
         if (childCount != 2) {
@@ -95,39 +113,54 @@ class SwipeMenuLayout @JvmOverloads constructor(
         contentView = getChildAt(0)
         menuView = getChildAt(1)
     }
-
+    // ==================== 🛠️ 关键修复 2：测量计算 Margin ====================
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
         isClickable = true
 
-        contentView.measure(widthMeasureSpec, heightMeasureSpec)
+        // 测量 contentView（考虑 margin）
+        measureChildWithMargins(contentView, widthMeasureSpec, 0, heightMeasureSpec, 0)
+        val lp = contentView.layoutParams as MarginLayoutParams
+        // 算出包含 Margin 的总宽高
+        val totalContentViewWidth = contentView.measuredWidth + lp.leftMargin + lp.rightMargin
+        val totalContentViewHeight = contentView.measuredHeight + lp.topMargin + lp.bottomMargin
 
         //  如果彻底禁用了侧滑或者菜单被隐藏，直接将菜单宽度置为 0，防止越界测量
         if (!isSwipeEnable || menuView.visibility == GONE) {
             menuWidth = 0
-            setMeasuredDimension(contentView.measuredWidth, contentView.measuredHeight)
+            setMeasuredDimension(totalContentViewWidth, totalContentViewHeight)
             return
         }
-
+        // 测量 menuView（使高度与 contentView 的实际 Height 保持一致）
         val menuWidthSpec = MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED)
         val menuHeightSpec =
             MeasureSpec.makeMeasureSpec(contentView.measuredHeight, MeasureSpec.EXACTLY)
         menuView.measure(menuWidthSpec, menuHeightSpec)
 
         menuWidth = menuView.measuredWidth
-        setMeasuredDimension(contentView.measuredWidth, contentView.measuredHeight)
+        // 设置容器自身大小（包含 Margin 的完整尺寸）
+        setMeasuredDimension(totalContentViewWidth, totalContentViewHeight)
     }
-
+    // ==================== 🛠️ 关键修复 3：布局放置考虑 Margin ====================
     override fun onLayout(changed: Boolean, l: Int, t: Int, r: Int, b: Int) {
-        contentView.layout(0, 0, contentView.measuredWidth, contentView.measuredHeight)
-        // 优化布局边界控制
+        val lp = contentView.layoutParams as MarginLayoutParams
+
+        // contentView 加上其左边距和上边距
+        val cl = paddingLeft + lp.leftMargin
+        val ct = paddingTop + lp.topMargin
+        val cr = cl + contentView.measuredWidth
+        val cb = ct + contentView.measuredHeight
+
+        contentView.layout(cl, ct, cr, cb)
+
+        // 菜单 View 顺延接在 contentView 的右边缘后面
         val actualMenuWidth = if (isSwipeEnable) menuWidth else 0
-        menuView.layout(
-            contentView.measuredWidth,
-            0,
-            contentView.measuredWidth + actualMenuWidth,
-            contentView.measuredHeight
-        )
+        val ml = cr + lp.rightMargin
+        val mt = ct
+        val mr = ml + actualMenuWidth
+        val mb = ct + menuView.measuredHeight
+
+        menuView.layout(ml, mt, mr, mb)
     }
 
     override fun onAttachedToWindow() {

@@ -28,4 +28,14 @@
     <color name="light_gray">#F5F5F5</color>
     <!--colorPrimary
     colorAccent-->
+
+    <color name="bg_page">#F3F4F6</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="text_primary">#1F2937</color>
+    <color name="text_secondary">#4B5563</color>
+    <color name="text_muted">#9CA3AF</color>
+    <color name="divider_color">#E5E7EB</color>
+    <color name="dialog_bg">#1E1E1E</color>
+
+
 </resources>

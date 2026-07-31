@@ -14,5 +14,15 @@
     <!-- 4. 标题栏在夜间应该和背景融为一体，采用深灰色 -->
     <color name="theme_toolbar_bg">#1A1A1A</color>
 
-    <color name="theme_color">#FF03DAC5</color><!--夜间模式主题色固定 #2D2D45FF-->
+
+
+    <color name="theme_color">#121212</color><!--夜间模式主题色固定 #121212-->
+
+    <color name="bg_page">#121212</color>
+    <color name="bg_card">#1E1E1E</color>
+    <color name="text_primary">#F3F4F6</color>
+    <color name="text_secondary">#D1D5DB</color>
+    <color name="text_muted">#9CA3AF</color>
+    <color name="divider_color">#2D3748</color>
+    <color name="dialog_bg">#1E1E1E</color>
 </resources>
